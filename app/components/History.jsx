@@ -47,7 +47,7 @@ export default function History(props) {
       <h1 className={'text-center mt-10 font-bold text-l text-white relative glitch-noise'} data-glitch={props.lan == 1?  state.success_descr_ar: state.success_descr} >{props.lan == 1?  state.success_descr_ar: state.success_descr}</h1>
       </div>
       <video autoPlay muted loop className="rotate-100 absolute  left-0 z-[-1] top-0 bottom-0 w-full h-full object-cover">
-        <source src={"/video/"+state.section3_video} type="video/mp4" />
+        <source src={state.section3_video} type="video/mp4" />
       </video>
   </div>);
 }
