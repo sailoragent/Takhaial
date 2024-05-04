@@ -7,14 +7,14 @@ export const data = {
   battern:'battern.svg',
 
 
-  intro_video:'desk.mp4',
-  section1_video:'sec1.mp4',
-  section2_video:'sec2.mp4',
-  section3_video:'sec1.mp4',
+  intro_video:'https://arglb.blob.core.windows.net/video/desk.mp4',
+  section1_video:'https://arglb.blob.core.windows.net/video/vecteezy_abstract-glowing-line-particles-wave-dark-background_34769234.mp4',
+  section2_video:'https://arglb.blob.core.windows.net/video/vecteezy_motion-graphics-background_27179714.mp4',
+  section3_video:'https://arglb.blob.core.windows.net/video/vecteezy_abstract-glowing-line-particles-wave-dark-background_34769234.mp4',
   section4_video:'sec4.mp4',
-  section5_video:'sec5.mp4',
-  section6_video:'sec6.mp4',
-  section7_video:'sec6.mp4',
+  section5_video:'https://arglb.blob.core.windows.net/video/vecteezy_abstract-digital-blue-particle-waves-and-lights-animated_23887085.mp4',
+  section6_video:'https://arglb.blob.core.windows.net/video/sec6.mp4',
+  section7_video:'https://arglb.blob.core.windows.net/video/sec6.mp4',
 
   why_img:'img3.png',
   contact_img:'callicon.svg',
