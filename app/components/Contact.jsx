@@ -73,7 +73,7 @@ export default function Contact(props) {
         </ul>
         <p className="whitespace-break-spaces z-30 mb-3 justify-self-center text-white flex width-fit" > © 2024 <a href="https://takhaial.tech/" target="_blank">Takhaial.tech</a> All rights reserved. developed by <a href="https://digi-sail.com/" target="_black">DIGI-SAIL</a> </p>
         {state.section6_video && <video autoPlay muted loop className=" absolute  left-0 z-[-1] top-[0] h-[100vh] bottom-[0] w-full  object-cover">
-          <source src={"/video/"+state.section6_video} type="video/mp4" />
+          <source src={state.section6_video} type="video/mp4" />
         </video>}
     </section>
 
