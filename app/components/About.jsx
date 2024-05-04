@@ -19,7 +19,7 @@ export default function About(props) {
       </div>
     </div>
     <video autoPlay muted loop className="rotate-100 absolute  left-0 z-[-1] top-0 bottom-0 w-full h-full object-cover">
-      <source src={"/video/"+state.section2_video} type="video/mp4" />
+      <source src={state.section2_video} type="video/mp4" />
     </video>
   </section>
 );
