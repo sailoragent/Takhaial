@@ -16,6 +16,7 @@ import Contact from './components/Contact';
 export default function Home() {
   const [state] = useState(data);
   const [lang, setLang] = useState(0);
+  const [view, setView] = useState(false);
   useEffect(() => {
     window.addEventListener('load', function () {
       setTimeout(function () {
@@ -47,7 +48,7 @@ export default function Home() {
             </video>
         </div>}
         <Navbar   lan={lang} setLang={(e)=> setLang(e)} />
-        <div className="">
+        {lang && <div className="">
           <Intro    lan={lang} />
           <About    lan={lang} />
           <Why      lan={lang} />
@@ -55,7 +56,7 @@ export default function Home() {
           <History  lan={lang} />
           <Sectors  lan={lang} />
           <Contact  lan={lang} />
-        </div>
+        </div>}
     </main>
   );
 }
