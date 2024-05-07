@@ -16,12 +16,16 @@ import Contact from './components/Contact';
 export default function Home() {
   const [state] = useState(data);
   const [lang, setLang] = useState(0);
-  const [view, setView] = useState(false);
+
+  const videoRef = useRef();
+
   useEffect(() => {
     window.addEventListener('load', function () {
+      console.log('loaded');
       setTimeout(function () {
-          document.getElementById('myVideo').play();
-        }, 1000);
+          videoRef.current.play()
+          console.log('played',videoRef);
+        }, 2000);
 
       setTimeout(function () {
           document.getElementById('content').classList.remove('opacity-0');
@@ -34,7 +38,7 @@ export default function Home() {
 
   return (
     <main className="h-full w-full " id="scroll-container">
-        { <div  className={"h-full w-full fixed inset-0 z-[100] bg-[#000] transition duration-700 ease-in-out" + (lang ? ' pointer-events-none opacity-0':'')} >
+        <div  className={"h-full w-full fixed inset-0 z-[100] bg-[#000] transition duration-700 ease-in-out" + (lang ? ' pointer-events-none opacity-0':'')} >
             <div id="content" className={"justify-self-center fixed left-[50%] bottom-[18%] transform transform-navbar transition duration-500 opacity-0"} style={{transform: 'translate(-50%, 0px)',}}>
              <Image alt="takhaial"  height={20} width={20} className="w-full object-cover" src={"/"+state.nameLogo} />
             </div>
@@ -43,12 +47,12 @@ export default function Home() {
               <a className="text-center hover:shadow-3xl transition duration-500 w-[100px] pr-[10px] pl-[10px] pt-[10px] pb-[10px] content-center bg-[#262626] rounded-2xl " onClick={()=> setLang(1)}  > <li> <label> Arabic </label>  </li> </a>
             </ul>
 
-            <video id="myVideo" autoPlay className="rotate-100 absolute  left-0 z-[-1] top-0 bottom-0 w-full h-full object-cover">
+            <video ref={videoRef} id="myVideo" webkit-playsinline="true" playsInline={true} autoPlay className="rotate-100 absolute  left-0 z-[-1] top-0 bottom-0 w-full h-full object-cover">
               <source src={state.intro_video} type="video/mp4" />
             </video>
-        </div>}
-        <Navbar   lan={lang} setLang={(e)=> setLang(e)} />
+        </div>
         {lang && <div className="">
+          <Navbar   lan={lang} setLang={(e)=> setLang(e)} />
           <Intro    lan={lang} />
           <About    lan={lang} />
           <Why      lan={lang} />
